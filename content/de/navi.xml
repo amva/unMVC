@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<static>
+	<navi>
+	    <items>
+		    <item uri="index"><title>Home</title></item>
+		    <item uri="c1">
+		        <title>ITEM1-DE</title>
+		        <items>
+		            <item uri="c_1_1"><title>SUBITEM1</title></item>
+		            <item uri="pricelist"><title>SUBITEM2</title></item>
+		            <item uri="addons"><title>SUBITEM3</title></item>
+		            <item uri="videos"><title>SUBITEM4</title></item>
+		        </items>
+		    </item>
+		    <item uri="demos"><title>ITEM2</title></item>
+		    <item uri="forum"><title>ITEM3</title></item>
+		    <item uri="order"><title>ITEM4</title></item>
+		    <item uri="contact"><title>ITEM4</title></item>
+	    </items>
+	</navi>
+</static>

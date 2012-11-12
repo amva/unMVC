@@ -1,0 +1,11 @@
+<?php
+require DIR_VIEW . 'head.phtml';
+require DIR_VIEW . 'header.phtml';
+?>
+		<div id="content-container" class="content-text">
+<?php
+require DIR_VIEW . $this->renderedFile;
+?>
+		</div>
+<?php
+require DIR_VIEW . 'footer.phtml';

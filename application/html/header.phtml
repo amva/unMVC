@@ -1,0 +1,47 @@
+<?php
+
+	$lang = App::getApp()->getLanguage();
+	$ptr_pos = $lang == LANG_EN ? 56 : 20; 
+	$navi = &$this->menu_items;
+	$key = -1;
+	
+?>
+	<div id="wrapper" class="container">
+		<div id="header-container" class="" >
+			
+			<div id="logo-container" style="position: absolute; left: 30px; top: 20px">
+			<img src="<?php echo URL ?>public/img/logo_main_3.png" id="logo" /> 
+			</div>
+			<div id="menu-button-box">
+			
+			<?php foreach($navi as $item) {
+				
+				$border_style = '';
+				if (++$key == 0)
+						$border_style = 'border-top-left-radius: 0px';
+				else if($key == 5)
+						$border_style = 'border-top-right-radius: 0px';
+			
+				$uri = $item->attributes()->uri;
+				
+				?>
+				<?php if(App::getApp()->getCtlName() == $uri): ?>
+				<span class="menu-button-active" style="<?php echo $border_style ?>" >
+					<a href="#" style="color: #d0d0d0"><?php  echo $item->title ?></a>
+				</span>
+				<?php else: ?>	
+				<span class="menu-button-active" style="<?php echo $border_style ?>">
+					<a href="<?php echo URL . $uri ?>"><?php  echo $item->title ?></a>
+				</span>
+				<?php endif; ?>
+			<?php } ?>
+			
+			</div>	
+			<div id="lang-ptr" style="position: absolute; top:-3px; right: <?php echo $ptr_pos ?>px; font-size: 9px; color: #585c5c" href="#">▼</div>
+			<div id="lang-button-box">
+					<!-- <span style="color:#606060; background-color: none;	">Language: </span> -->
+					<a href="<?php echo $lang == LANG_EN ? '#' : App::getApp()->getURL() . '/?lang=' . LANG_EN ?>" class="cur-lang" id="lang-en">English</a>&nbsp;
+					<a href="<?php echo $lang == LANG_DE ? '#' : App::getApp()->getURL() . '/?lang=' . LANG_DE ?>" class="cur-lang" id="lang-de">Deutsch</a>
+			</div>
+		
+		</div>
