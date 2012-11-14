@@ -9,7 +9,7 @@ $gLangs = array (
 
 define ('SITE_TITLE', 'A\'MVC');
 define ('COPY', 'A.V Software &copy 2012');
-define ('ADMIN_EMAIL', 'dorphic@gmail.com');
+define ('ADMIN_EMAIL', 'armanvn@gmail.com');
 
 // Predefined
 define ('LANG_EN', $gLangs['en']);
