@@ -16,7 +16,7 @@ class Text_Model extends Model
 		 * model must know how to map requiest view/sub
 		 * to appropriate physical path and pass it to Content
 		 */
-		$dir_lang = App::getApp()->getLanguage() == LANG_EN
+		$dir_lang = App::getLanguage() == LANG_EN
 							? 'en' . DS : 'de' . DS;
 		$file = DIR_CONTENT . $dir_lang . $view . DS . $sub . '.xml';
 		if (!file_exists($file)) {
