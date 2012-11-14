@@ -23,10 +23,9 @@ class Index extends Controller
 	 */
 	public function __call($method, $args) 
 	{
-		foreach ($this->_actions as $action) {
-			if ($action == $method)
-				return $this->render('index', $method);
-		}
+		if (isset($this->_actions[$action]))
+			return $this->render('index', $method);
+		// handle invalid action call
 	}
 	
 }
