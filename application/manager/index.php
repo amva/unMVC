@@ -23,7 +23,7 @@ class Index extends Controller
 	 */
 	public function __call($method, $args) 
 	{
-		if (isset($this->_actions[$action]))
+		if (isset($this->_actions[$method]))
 			return $this->render('index', $method);
 		// handle invalid action call
 	}
